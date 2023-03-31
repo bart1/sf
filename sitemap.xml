@@ -73,6 +73,9 @@
     <loc>/reference/gdal.html</loc>
   </url>
   <url>
+    <loc>/reference/gdal_addo.html</loc>
+  </url>
+  <url>
     <loc>/reference/gdal_utils.html</loc>
   </url>
   <url>
@@ -176,6 +179,9 @@
   </url>
   <url>
     <loc>/reference/st_bbox.html</loc>
+  </url>
+  <url>
+    <loc>/reference/st_break_antimeridian.html</loc>
   </url>
   <url>
     <loc>/reference/st_cast.html</loc>
