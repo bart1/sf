@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="1. Simple Features for R">
 <meta property="og:description" content="sf">
-<meta property="og:image" content="/logo.png">
+<meta property="og:image" content="https://r-spatial.github.io/sf/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">sf</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0-13</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0-14</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -364,7 +364,7 @@ features with attributes, the two are put together in <code>sf</code>
 <code>nc</code> dataset from a file that is contained in the
 <code>sf</code> package:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
 <span><span class="co">## Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 8.2.1; sf_use_s2() is TRUE</span></span>
 <span><span class="va">nc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/st_read.html">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"shape/nc.shp"</span>, package<span class="op">=</span><span class="st">"sf"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">## Reading layer `nc' from data source </span></span>
@@ -412,44 +412,45 @@ and an abridged version of the geometry</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/methods.html" class="external-link">methods</a></span><span class="op">(</span>class <span class="op">=</span> <span class="st">"sf"</span><span class="op">)</span></span>
 <span><span class="co">##  [1] [                            [[&lt;-                        </span></span>
-<span><span class="co">##  [3] $&lt;-                          aggregate                   </span></span>
-<span><span class="co">##  [5] as.data.frame                cbind                       </span></span>
-<span><span class="co">##  [7] coerce                       dbDataType                  </span></span>
-<span><span class="co">##  [9] dbWriteTable                 duplicated                  </span></span>
-<span><span class="co">## [11] filter                       identify                    </span></span>
-<span><span class="co">## [13] initialize                   merge                       </span></span>
-<span><span class="co">## [15] plot                         print                       </span></span>
-<span><span class="co">## [17] rbind                        show                        </span></span>
-<span><span class="co">## [19] slotsFromS3                  st_agr                      </span></span>
-<span><span class="co">## [21] st_agr&lt;-                     st_area                     </span></span>
-<span><span class="co">## [23] st_as_s2                     st_as_sf                    </span></span>
-<span><span class="co">## [25] st_as_sfc                    st_bbox                     </span></span>
-<span><span class="co">## [27] st_boundary                  st_break_antimeridian       </span></span>
-<span><span class="co">## [29] st_buffer                    st_cast                     </span></span>
-<span><span class="co">## [31] st_centroid                  st_collection_extract       </span></span>
-<span><span class="co">## [33] st_concave_hull              st_convex_hull              </span></span>
-<span><span class="co">## [35] st_coordinates               st_crop                     </span></span>
-<span><span class="co">## [37] st_crs                       st_crs&lt;-                    </span></span>
-<span><span class="co">## [39] st_difference                st_drop_geometry            </span></span>
-<span><span class="co">## [41] st_filter                    st_geometry                 </span></span>
-<span><span class="co">## [43] st_geometry&lt;-                st_inscribed_circle         </span></span>
-<span><span class="co">## [45] st_interpolate_aw            st_intersection             </span></span>
-<span><span class="co">## [47] st_intersects                st_is_valid                 </span></span>
-<span><span class="co">## [49] st_is                        st_join                     </span></span>
-<span><span class="co">## [51] st_line_merge                st_m_range                  </span></span>
-<span><span class="co">## [53] st_make_valid                st_minimum_rotated_rectangle</span></span>
-<span><span class="co">## [55] st_nearest_points            st_node                     </span></span>
-<span><span class="co">## [57] st_normalize                 st_point_on_surface         </span></span>
-<span><span class="co">## [59] st_polygonize                st_precision                </span></span>
-<span><span class="co">## [61] st_reverse                   st_sample                   </span></span>
-<span><span class="co">## [63] st_segmentize                st_set_precision            </span></span>
-<span><span class="co">## [65] st_shift_longitude           st_simplify                 </span></span>
-<span><span class="co">## [67] st_snap                      st_sym_difference           </span></span>
-<span><span class="co">## [69] st_transform                 st_triangulate_constrained  </span></span>
-<span><span class="co">## [71] st_triangulate               st_union                    </span></span>
-<span><span class="co">## [73] st_voronoi                   st_wrap_dateline            </span></span>
-<span><span class="co">## [75] st_write                     st_z_range                  </span></span>
-<span><span class="co">## [77] st_zm                        transform                   </span></span>
+<span><span class="co">##  [3] [&lt;-                          $&lt;-                         </span></span>
+<span><span class="co">##  [5] aggregate                    as.data.frame               </span></span>
+<span><span class="co">##  [7] cbind                        coerce                      </span></span>
+<span><span class="co">##  [9] dbDataType                   dbWriteTable                </span></span>
+<span><span class="co">## [11] duplicated                   filter                      </span></span>
+<span><span class="co">## [13] identify                     initialize                  </span></span>
+<span><span class="co">## [15] merge                        plot                        </span></span>
+<span><span class="co">## [17] print                        rbind                       </span></span>
+<span><span class="co">## [19] show                         slotsFromS3                 </span></span>
+<span><span class="co">## [21] st_agr                       st_agr&lt;-                    </span></span>
+<span><span class="co">## [23] st_area                      st_as_s2                    </span></span>
+<span><span class="co">## [25] st_as_sf                     st_as_sfc                   </span></span>
+<span><span class="co">## [27] st_bbox                      st_boundary                 </span></span>
+<span><span class="co">## [29] st_break_antimeridian        st_buffer                   </span></span>
+<span><span class="co">## [31] st_cast                      st_centroid                 </span></span>
+<span><span class="co">## [33] st_collection_extract        st_concave_hull             </span></span>
+<span><span class="co">## [35] st_convex_hull               st_coordinates              </span></span>
+<span><span class="co">## [37] st_crop                      st_crs                      </span></span>
+<span><span class="co">## [39] st_crs&lt;-                     st_difference               </span></span>
+<span><span class="co">## [41] st_drop_geometry             st_filter                   </span></span>
+<span><span class="co">## [43] st_geometry                  st_geometry&lt;-               </span></span>
+<span><span class="co">## [45] st_inscribed_circle          st_interpolate_aw           </span></span>
+<span><span class="co">## [47] st_intersection              st_intersects               </span></span>
+<span><span class="co">## [49] st_is_valid                  st_is                       </span></span>
+<span><span class="co">## [51] st_join                      st_line_merge               </span></span>
+<span><span class="co">## [53] st_m_range                   st_make_valid               </span></span>
+<span><span class="co">## [55] st_minimum_rotated_rectangle st_nearest_points           </span></span>
+<span><span class="co">## [57] st_node                      st_normalize                </span></span>
+<span><span class="co">## [59] st_point_on_surface          st_polygonize               </span></span>
+<span><span class="co">## [61] st_precision                 st_reverse                  </span></span>
+<span><span class="co">## [63] st_sample                    st_segmentize               </span></span>
+<span><span class="co">## [65] st_set_precision             st_shift_longitude          </span></span>
+<span><span class="co">## [67] st_simplify                  st_snap                     </span></span>
+<span><span class="co">## [69] st_sym_difference            st_transform                </span></span>
+<span><span class="co">## [71] st_triangulate_constrained   st_triangulate              </span></span>
+<span><span class="co">## [73] st_union                     st_voronoi                  </span></span>
+<span><span class="co">## [75] st_wrap_dateline             st_write                    </span></span>
+<span><span class="co">## [77] st_z_range                   st_zm                       </span></span>
+<span><span class="co">## [79] transform                   </span></span>
 <span><span class="co">## see '?methods' for accessing help and source code</span></span></code></pre></div>
 <p>It is also possible to create <code>data.frame</code> objects with
 geometry list-columns that are not of class <code>sf</code>,
@@ -498,8 +499,8 @@ part of the standards. The word <code>MULTIPOLYGON</code> is followed by
 three parentheses, because it can consist of multiple polygons, in the
 form of <code>MULTIPOLYGON(POL1,POL2)</code>, where <code>POL1</code>
 might consist of an exterior ring and zero or more interior rings, as of
-<code>(EXT1,HOLE1,HOLE2)</code>. Sets of coordinates are held together
-with parentheses, so we get
+<code>(EXT1,HOLE1,HOLE2)</code>. Sets of coordinates belonging to a
+single polygon are held together with parentheses, so we get
 <code>((crds_ext)(crds_hole1)(crds_hole2))</code> where
 <code>crds_</code> is a comma-separated set of coordinates of a ring.
 This leads to the case above, where
@@ -911,8 +912,8 @@ all database drivers, where the database is updated by adding a
 table.</li>
 <li>
 <code>delete_layer=TRUE</code> causes <code>st_write</code> try to
-open the the data source and delete the layer; no errors are given if
-the data source is not present, or the layer does not exist in the data
+open the data source and delete the layer; no errors are given if the
+data source is not present, or the layer does not exist in the data
 source.</li>
 <li>
 <code>delete_dsn=TRUE</code> causes <code>st_write</code> to delete
@@ -1009,6 +1010,14 @@ ways:</p>
 <span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">nc</span><span class="op">)</span><span class="op">[</span><span class="fl">15</span><span class="op">]</span> <span class="op">=</span> <span class="st">"geometry"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">nc</span>, <span class="st">"sf_column"</span><span class="op">)</span> <span class="op">=</span> <span class="st">"geometry"</span></span>
 <span><span class="va">nc.sp</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/coerce-methods.html">as</a></span><span class="op">(</span><span class="va">nc</span>, <span class="st">"Spatial"</span><span class="op">)</span></span>
+<span><span class="co">## The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,</span></span>
+<span><span class="co">## which was just loaded, will retire in October 2023.</span></span>
+<span><span class="co">## Please refer to R-spatial evolution reports for details, especially</span></span>
+<span><span class="co">## https://r-spatial.org/r/2023/05/15/evolution4.html.</span></span>
+<span><span class="co">## It may be desirable to make the sf package available;</span></span>
+<span><span class="co">## package maintainers should consider adding sf to Suggests:.</span></span>
+<span><span class="co">## The sp package is now running under evolution status 2</span></span>
+<span><span class="co">##      (status 2 uses the sf package in place of rgdal)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="va">nc.sp</span><span class="op">)</span></span>
 <span><span class="co">## [1] "SpatialPolygonsDataFrame"</span></span>
 <span><span class="co">## attr(,"package")</span></span>
@@ -1136,7 +1145,7 @@ and polygon:</p>
 (left); non-valid geometries are for instance polygons with slivers
 (middle) or self-intersections (right).</p>
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
 <span><span class="va">x1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/st.html">st_linestring</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">x2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/st.html">st_polygon</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0.6</span>,<span class="fl">1</span>,<span class="fl">0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">x3</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/st.html">st_polygon</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -1172,9 +1181,9 @@ for the CRS:</p>
 <p>The <strong>units</strong> package can be used to convert between
 units:</p>
 <div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">units</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">km</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="co"># result in square kilometers</span></span>
+<code class="sourceCode R"><span><span class="fu">units</span><span class="fu">::</span><span class="fu"><a href="https://r-quantities.github.io/units/reference/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">km</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="co"># result in square kilometers</span></span>
 <span><span class="co">## 1137.108 [km^2]</span></span>
-<span><span class="fu">units</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">ha</span><span class="op">)</span> <span class="co"># result in hectares</span></span>
+<span><span class="fu">units</span><span class="fu">::</span><span class="fu"><a href="https://r-quantities.github.io/units/reference/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">ha</span><span class="op">)</span> <span class="co"># result in hectares</span></span>
 <span><span class="co">## 113710.8 [ha]</span></span></code></pre></div>
 <p>The result can be stripped of their attributes if needs be:</p>
 <div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
@@ -1221,7 +1230,7 @@ time:</p>
 <span><span class="co">## Reading layer `nc' from data source </span></span>
 <span><span class="co">##   `/home/runner/work/_temp/Library/sf/shape/nc.shp' using driver `ESRI Shapefile'</span></span>
 <span><span class="co">## Simple feature collection with 100 features and 14 fields</span></span>
-<span><span class="co">## Attribute-geometry relationship: 0 constant, 8 aggregate, 6 identity</span></span>
+<span><span class="co">## Attribute-geometry relationships: aggregate (8), identity (6)</span></span>
 <span><span class="co">## Geometry type: MULTIPOLYGON</span></span>
 <span><span class="co">## Dimension:     XY</span></span>
 <span><span class="co">## Bounding box:  xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965</span></span>
@@ -1286,7 +1295,7 @@ case it is an aggregate, change the <code>relation_to_geometry</code> to
 <ol style="list-style-type: decimal">
 <li>S. Scheider, B. Gräler, E. Pebesma, C. Stasch, 2016. Modelling
 spatio-temporal information generation. Int J of Geographic Information
-Science, 30 (10), 1980-2008. (<a href="https://www.tandfonline.com/doi/full/10.1080/13658816.2016.1151520" class="external-link">open
+Science, 30 (10), 1980-2008. (<a href="https://doi.org/10.1080/13658816.2016.1151520" class="external-link">open
 access</a>)</li>
 <li>Stasch, C., S. Scheider, E. Pebesma, W. Kuhn, 2014. Meaningful
 Spatial Prediction and Aggregation. Environmental Modelling &amp;
